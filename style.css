@@ -1,0 +1,116 @@
+@font-face {
+  font-family: Inter;
+  src: url("./design/Inter/Inter-VariableFont_slnt\,wght.ttf");
+  font-weight: 400, 700;
+}
+body {
+  background-color: hsl(233, 47%, 7%);
+  color: hsl(0, 0%, 100%);
+  font-family: Inter;
+}
+main {
+  border-radius: 5px;
+  max-width: 1440px;
+  margin: 10% 20%;
+  background-color: hsl(244, 38%, 16%);
+  max-height: fit-content;
+}
+
+.container {
+  display: grid;
+  column-gap: 4rem;
+  /* grid-template-rows: 1fr; */
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "item-1 item-2";
+}
+.item-1 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  grid-area: item-1;
+}
+.header {
+  padding-top: 10%;
+  padding-left: 15%;
+  padding-right: 0rem;
+}
+.description {
+  padding-left: 15%;
+}
+.data-container {
+  display: grid;
+  align-items: center;
+  padding-left: 15%;
+  /* grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 5rem;
+  /* color: hsla(0, 0%, 100%, 0.6); */
+}
+
+.item-2 {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(277, 64%, 61%);
+  border-radius: 0px 5px 5px 0px;
+  grid-area: item-2;
+}
+.item-2 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 5px 5px 0px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  opacity: 0.5; /* background: linear-gradient(purple, violet); */
+}
+p {
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.data {
+  padding-top: 0rem;
+  font-size: 12px;
+  margin-top: 0em;
+  /* align-content: flex-start; */
+}
+h3 {
+  margin-bottom: 0em;
+}
+@media (max-width: 375px) {
+  .container {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "item-2"
+      "item-1";
+  }
+  .data-container {
+    /* width: 100%;
+    height: 100%; */
+
+    align-items: center;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "data-1"
+      "data-2"
+      "data-3";
+  }
+
+  main {
+    margin: auto;
+    width: 100%;
+  }
+  .item-2 img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0px 5px 5px 0px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.5; /* background: linear-gradient(purple, violet); */
+  }
+}
